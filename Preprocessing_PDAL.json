@@ -1,0 +1,39 @@
+[
+    {
+      "type":"readers.las",
+      "filename":"%INPUT%"
+    },
+    {
+      "type":"filters.outlier",
+      "method":"statistical",
+      "mean_k":8,
+      "multiplier":2.5
+    },
+    {
+      "type":"filters.range",
+      "limits":"Classification![7:7], ScanAngleRank[-20:20]"
+    },
+    {
+      "type":"filters.hag_nn",
+      "allow_extrapolation": true
+    },
+    {
+      "type":"filters.range",
+      "limits":"HeightAboveGround[0:100]"
+    },
+    {
+      "type":"filters.sample",
+      "cell":1
+    },
+    {
+      "type":"filters.reprojection",
+      "in_srs":"EPSG:25832",
+      "out_srs":"EPSG:3035"
+    },
+    {
+      "type": "writers.copc",
+      "filename": "%OUTPUT%",
+      "a_srs": "EPSG:3035+7837",
+      "extra_dims": "HeightAboveGround=float"
+    }
+  ]

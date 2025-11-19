@@ -1,4 +1,4 @@
-# Work on Thüringia existing Tiles
+# Preprocessing on Thüringia Tiles
 
 A high-resolution, consistent, and nationwide Airborne Laser Scanning (ALS) dataset is essential for accurately deriving forest metrics such as **canopy cover**, **top height**, **growing stock**,
 and **vertical layering** across Germany, as emphasized by the **ForestPulse** project. ALS is uniquely suited to this task because it penetrates vegetation layers and captures multiple echoes from
@@ -29,17 +29,6 @@ which included:
 * **Reformatting** the data into **COPC (Cloud Optimized Point Cloud)** format for efficient downstream processing and visualization.
 
 ![Flowchart-2](https://github.com/user-attachments/assets/ab211933-0c7b-4a6b-8f26-ba8e01b64629)
-
-
-The preprocessed dataset, now organized in COPC format, forms the basis for our calculation of the targeted forest attributes:
-
-* **Canopy cover**, estimated through point cloud or raster-based metrics derived from first returns,
-* **Top height**, calculated as the 95th percentile of vegetation height (H95),
-* **Growing stock**, inferred using statistical models that relate ALS-derived structural metrics to field inventory data, and
-* **Vertical layering**, characterized using vertical foliage distribution profiles and relative density metrics.
-
-This state-level analysis serves as both a proof-of-concept and preparatory work for the upcoming nationwide implementation, once the BKG dataset becomes available. 
-The methodology developed here can be readily scaled to other federal states as data availability improves.
 
 **References**
 

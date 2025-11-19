@@ -34,5 +34,3 @@ which included:
 
 * Goodbody, T. R. H., Coops, N. C., Senf, C., & Seidl, R. (2023). Airborne laser scanning to optimize the sampling efficiency of a forest management inventory in South-Eastern Germany. Ecological Indicators, 157, Artikel 111281. https://doi.org/10.1016/j.ecolind.2023.111281
 
-* Margaret Penner, Joanne C White, Murray E Woods, Automated characterization of forest canopy vertical layering for predicting forest inventory attributes by layer using airborne LiDAR data, Forestry: An International Journal of Forest Research, Volume 97, Issue 1, January 2024, Pages 59–75, https://doi.org/10.1093/forestry/cpad033
-

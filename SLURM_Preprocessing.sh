@@ -2,7 +2,7 @@
 #SBATCH --job-name=preprocessing
 #SBATCH --partition=standard96
 #SBATCH --time=00:10:00
-#SBATCH --array=0
+#SBATCH --array=0-99         #provide the array number based on the tiles
 #SBATCH --output=slurm-%A_%a.out
 #SBATCH --error=slurm-%A_%a.err
 

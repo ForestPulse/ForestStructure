@@ -11,7 +11,7 @@ source activate lidar
 
 INPUT_DIR="/user/pbasnet/u18501/jupyterhub-gwdg/Preprocessing_Trial/slurmTest/laz_tiles"
 OUTPUT_DIR="/user/pbasnet/u18501/jupyterhub-gwdg/Preprocessing_Trial/slurmTest/process_tiles"
-TEMPLATE="/user/pbasnet/u18501/jupyterhub-gwdg/Preprocessing_Trial/slurmTest/poisson_sample.json"
+TEMPLATE="/user/pbasnet/u18501/jupyterhub-gwdg/Preprocessing_Trial/slurmTest/Preprocessing_PDAL.json"
 
 mkdir -p "$OUTPUT_DIR"
 

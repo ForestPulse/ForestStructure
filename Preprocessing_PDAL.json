@@ -33,7 +33,7 @@
     {
       "type": "writers.copc",
       "filename": "%OUTPUT%",
-      "forward": all,
+      "forward": "all",
       "a_srs": "EPSG:3035+7837",
       "extra_dims": "HeightAboveGround=float"    
     }

@@ -23,7 +23,7 @@
     },
     {
       "type":"filters.sample",
-      "cell":1
+      "cell":0.6
     },
     {
       "type":"filters.reprojection",
@@ -33,7 +33,8 @@
     {
       "type": "writers.copc",
       "filename": "%OUTPUT%",
+      "forward": all,
       "a_srs": "EPSG:3035+7837",
-      "extra_dims": "HeightAboveGround=float"
+      "extra_dims": "HeightAboveGround=float"    
     }
   ]

@@ -35,6 +35,8 @@
       "filename": "%OUTPUT%",
       "forward": "all",
       "a_srs": "EPSG:3035+7837",
-      "extra_dims": "HeightAboveGround=float"    
+      "extra_dims": "HeightAboveGround=float",
+      "offset_x": "auto",
+      "offset_y": "auto"
     }
   ]

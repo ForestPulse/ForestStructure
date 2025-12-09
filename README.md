@@ -1,4 +1,4 @@
-# Preprocessing on Thüringia Tiles
+# Preprocessing
 
 A high-resolution, consistent, and nationwide Airborne Laser Scanning (ALS) dataset is essential for accurately deriving forest metrics such as **canopy cover**, **top height**, **growing stock**,
 and **vertical layering** across Germany, as emphasized by the **ForestPulse** project. ALS is uniquely suited to this task because it penetrates vegetation layers and captures multiple echoes from

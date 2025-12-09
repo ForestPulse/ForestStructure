@@ -1,12 +1,12 @@
 ## PDAL Tindex and ForceCube Tile Intersection Workflow
 This documentation describes the workflow for generating a PDAL
-**tindex** (tile index) in **EPSG:3035** from LiDAR LAZ tiles and
+tindex (tile index) in EPSG:3035 from LiDAR LAZ tiles and
 performing spatial intersection with **ForceCube** grid tiles to
 determine which LiDAR tiles fall inside a selected ForceCube cell.
 
 ### 1. Generating a Tindex
 
-The input LAZ tiles are stored in **EPSG:25832** (ETRS89 / UTM 32N).\
+The input LAZ tiles are stored in EPSG:25832 (ETRS89 / UTM 32N).\
 The resulting GeoPackage tindex is written in **EPSG:3035**, ensuring
 compatibility with European equal-area grid systems and seamless
 integration with ForceCube.

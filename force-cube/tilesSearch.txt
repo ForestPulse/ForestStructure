@@ -65,3 +65,24 @@ tiles that fall inside a selected ForceCube tile (e.g., `X0065_Y0051`).
 
 Both datasets in **EPSG:3035** ensures accurate, CRS-consistent spatial operations.
 
+3. Collecting the selected tiles
+
+In this step, we like to copy the selected laz tiles of that FORCE-CUBE into a specific folder. (optional: for testing purpose only, we will use the script to delete input files once the processing end automatically). To do this, need to set the directory based on the file path, here for e.g., path
+
+/th_data/Thuringia_2014_2019_tiles/las_676_5597_1_th_2014-2019.laz
+
+so, the directory need to set "/user/pbasnet/u18501" from where the path of each tiles continue and run this
+
+## Script
+xargs -a ./jupyterhub-gwdg/Preprocessing_Trial/slurmTest/tiles_in_X0065_Y0051.txt cp -t ./jupyterhub-    gwdg/Preprocessing_Trial/slurmTest/thu_2014_20/fc_x0065_y0051/
+
+By now, all the tiles belongs to FORCE-CUBE tile (here e.g., "X0065_Y0051") are saved into the folder "fc_x0065_y0051"
+
+provide the list name of the copied tiles;
+
+## Script
+ls ./thu_2014_20/fc_x0065_y0051/*.laz > tiles_fc_x0065_y0051.txt
+
+It lists all the files with current folder locaton, for e.g.,
+
+./thu_2014_20/fc_x0065_y0051/las_655_5589_1_th_2014-2019.laz

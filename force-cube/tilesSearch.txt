@@ -48,14 +48,14 @@ tiles that fall inside a selected ForceCube tile (e.g., `X0065_Y0051`).
 ## Example Command
 
 /path/of/this/file/tilesClip.py \
-      --tindex_gpkg "D:\ForceCube\Thu_2014_19_tindex_epsg3035.gpkg" \
+      --tindex_gpkg "/path/file/Thu_2014_19_tindex_epsg3035.gpkg" \
       --tindex_layer "Thu_2014_19_tindex_epsg3035" \
       --tindex_id_field "tile" \
-      --force_gpkg "D:\ForceCube\DE_force-cube.gpkg" \
+      --force_gpkg "/path/file/DE_force-cube.gpkg" \
       --force_layer "epsg3035" \
       --force_id_field "id" \
       --target_id "X0065_Y0051" \
-      --output "D:\ForceCube\tiles_in_X0065_Y0051.txt"
+      --output "/path/write/file/tiles_in_X0065_Y0051.txt"
 
 ## Workflow Summary
 

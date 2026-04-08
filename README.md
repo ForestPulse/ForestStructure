@@ -1,4 +1,4 @@
-# ALS Data Preprocessing & Homogenization
+# ALS Data provision and Preprocessing
 
 ALS point cloud preprocessing pipeline for reprojection and retiling of Airborne Laser Scanning (ALS) data to align with the [FORCE Datacube](https://force-eo.readthedocs.io/) framework. Developed as part of the [ForestPulse](https://github.com/ForestPulse) project (Work Package 4) at HAWK Göttingen.
 

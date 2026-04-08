@@ -230,15 +230,25 @@ sacct -j <job_id> \
 ## Repository Structure
 
 ForestStructure/
+
 ├── generate_header_cache.py # Stage A: header indexing
+
 ├── pdal_pc_level_reprojection.py # Stage B: reprojection and retiling
+
 ├── processing_slurm.sh # Stage B: SLURM job script
+
 ├── SLURM_Preprocessing.sh # Additional SLURM preprocessing script
+
 ├── Preprocessing_PDAL.json # PDAL pipeline configuration
+
 ├── generate_tiles.py # Tile generation utility
+
 ├── header_cache/ # Cached header outputs (Stage A)
-├── force-cube/ # FORCE cube reference files
+
+├── FORCE_cube/ # FORCE cube reference files
+
 ├── logs/ # Processing logs
+
 └── README.md
 
 
@@ -252,12 +262,6 @@ Pilot ALS data for Thüringia (2020–2025) accessed from:
 - 16,945 tiles, 1 km × 1 km each
 - Average point density: ~33 pts/m²
 - Intersects 35 FORCE cube tiles
-
----
-
-## License
-
-To be defined by the ForestPulse project consortium.
 
 ---
 

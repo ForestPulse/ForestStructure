@@ -1,0 +1,84 @@
+================================================================================
+JobID = 13103954
+User = u18501, Account = nhr_ni_starter_24350
+Partition = medium96s, Nodelist = c0110
+================================================================================
+Extracting required input files (tiles 480-539) for cube X0065_Y0048...
+Copying 60 files to local SSD...
+======================================================
+Job Array ID : 8
+Cube ID      : X0065_Y0048
+Tile range   : 480 – 539
+Input files  : 60
+Workers      : 30
+Node         : c0110
+Temp dir     : /local/jobs/u18501_13103954/task_8
+Start time   : 2026-03-24 15:35:05
+======================================================
+/opt/conda/envs/pdalenv/lib/python3.12/site-packages/osgeo/ogr.py:615: FutureWarning: Neither ogr.UseExceptions() nor ogr.DontUseExceptions() has been explicitly called. In GDAL 4.0, exceptions will be enabled by default.
+  warnings.warn(
+Projecting FORCE cube X0065_Y0048 geometry from EPSG:25832 to EPSG:3035...
+FORCE cube X0065_Y0048 bounds (Aligned to EPSG:3035): (4406026.363042001, 3104919.607964999, 4436026.363042001, 3134919.607965)
+Node processing 51 subtiles with 30 workers.
+Error (16, 0): [Errno 2] No such file or directory: '/mnt/data/las_32_672_5657_1_th_2020-2025.laz'
+Error (16, 4): [Errno 2] No such file or directory: '/mnt/data/las_32_671_5661_1_th_2020-2025.laz'
+Error (16, 3): [Errno 2] No such file or directory: '/mnt/data/las_32_671_5660_1_th_2020-2025.laz'
+Error (16, 9): [Errno 2] No such file or directory: '/mnt/data/las_32_670_5666_1_th_2020-2025.laz'
+Error (16, 10): [Errno 2] No such file or directory: '/mnt/data/las_32_670_5667_1_th_2020-2025.laz'
+Error (16, 8): [Errno 2] No such file or directory: '/mnt/data/las_32_670_5665_1_th_2020-2025.laz'
+Error (16, 2): [Errno 2] No such file or directory: '/mnt/data/las_32_671_5659_1_th_2020-2025.laz'
+Error (16, 12): [Errno 2] No such file or directory: '/mnt/data/las_32_670_5669_1_th_2020-2025.laz'
+Error (16, 14): [Errno 2] No such file or directory: '/mnt/data/las_32_671_5671_1_th_2020-2025.laz'
+Error (16, 13): [Errno 2] No such file or directory: '/mnt/data/las_32_670_5670_1_th_2020-2025.laz'
+Error (16, 15): [Errno 2] No such file or directory: '/mnt/data/las_32_670_5672_1_th_2020-2025.laz'
+Error (16, 1): [Errno 2] No such file or directory: '/mnt/data/las_32_672_5658_1_th_2020-2025.laz'
+Error (16, 5): [Errno 2] No such file or directory: '/mnt/data/las_32_671_5662_1_th_2020-2025.laz'
+Error (16, 11): [Errno 2] No such file or directory: '/mnt/data/las_32_670_5668_1_th_2020-2025.laz'
+Error (16, 6): [Errno 2] No such file or directory: '/mnt/data/las_32_670_5663_1_th_2020-2025.laz'
+Error (16, 7): [Errno 2] No such file or directory: '/mnt/data/las_32_670_5664_1_th_2020-2025.laz'
+Error (16, 16): [Errno 2] No such file or directory: '/mnt/data/las_32_670_5673_1_th_2020-2025.laz'
+Error (16, 17): [Errno 2] No such file or directory: '/mnt/data/las_32_670_5674_1_th_2020-2025.laz'
+Error (16, 19): [Errno 2] No such file or directory: '/mnt/data/las_32_670_5676_1_th_2020-2025.laz'
+Error (16, 27): [Errno 2] No such file or directory: '/mnt/data/las_32_670_5684_1_th_2020-2025.laz'
+Error (16, 24): [Errno 2] No such file or directory: '/mnt/data/las_32_670_5681_1_th_2020-2025.laz'
+Error (16, 26): [Errno 2] No such file or directory: '/mnt/data/las_32_670_5683_1_th_2020-2025.laz'
+Error (16, 18): [Errno 2] No such file or directory: '/mnt/data/las_32_671_5675_1_th_2020-2025.laz'
+Error (16, 23): [Errno 2] No such file or directory: '/mnt/data/las_32_670_5681_1_th_2020-2025.laz'
+Error (16, 25): [Errno 2] No such file or directory: '/mnt/data/las_32_670_5682_1_th_2020-2025.laz'
+Error (16, 28): [Errno 2] No such file or directory: '/mnt/data/las_32_670_5685_1_th_2020-2025.laz'
+Error (16, 29): [Errno 2] No such file or directory: '/mnt/data/las_32_670_5686_1_th_2020-2025.laz'
+Error (17, 0): [Errno 2] No such file or directory: '/mnt/data/las_32_673_5657_1_th_2020-2025.laz'
+Error (17, 3): [Errno 2] No such file or directory: '/mnt/data/las_32_673_5660_1_th_2020-2025.laz'
+Error (17, 2): [Errno 2] No such file or directory: '/mnt/data/las_32_673_5659_1_th_2020-2025.laz'
+Error (17, 1): [Errno 2] No such file or directory: '/mnt/data/las_32_673_5658_1_th_2020-2025.laz'
+Error (17, 6): [Errno 2] No such file or directory: '/mnt/data/las_32_671_5663_1_th_2020-2025.laz'
+Error (17, 5): [Errno 2] No such file or directory: '/mnt/data/las_32_672_5662_1_th_2020-2025.laz'
+Error (17, 14): [Errno 2] No such file or directory: '/mnt/data/las_32_671_5671_1_th_2020-2025.laz'
+Error (17, 18): [Errno 2] No such file or directory: '/mnt/data/las_32_671_5675_1_th_2020-2025.laz'
+Error (17, 7): [Errno 2] No such file or directory: '/mnt/data/las_32_671_5664_1_th_2020-2025.laz'
+Error (17, 9): [Errno 2] No such file or directory: '/mnt/data/las_32_671_5666_1_th_2020-2025.laz'
+Error (17, 4): [Errno 2] No such file or directory: '/mnt/data/las_32_672_5661_1_th_2020-2025.laz'
+Error (17, 8): [Errno 2] No such file or directory: '/mnt/data/las_32_671_5665_1_th_2020-2025.laz'
+Error (17, 13): [Errno 2] No such file or directory: '/mnt/data/las_32_672_5670_1_th_2020-2025.laz'
+Error (17, 15): [Errno 2] No such file or directory: '/mnt/data/las_32_672_5672_1_th_2020-2025.laz'
+Error (17, 11): [Errno 2] No such file or directory: '/mnt/data/las_32_671_5668_1_th_2020-2025.laz'
+Error (17, 28): [Errno 2] No such file or directory: '/mnt/data/las_32_672_5685_1_th_2020-2025.laz'
+Error (17, 12): [Errno 2] No such file or directory: '/mnt/data/las_32_671_5669_1_th_2020-2025.laz'
+Error (17, 25): [Errno 2] No such file or directory: '/mnt/data/las_32_671_5683_1_th_2020-2025.laz'
+Error (17, 10): [Errno 2] No such file or directory: '/mnt/data/las_32_672_5667_1_th_2020-2025.laz'
+Error (17, 29): [Errno 2] No such file or directory: '/mnt/data/las_32_672_5686_1_th_2020-2025.laz'
+Error (17, 26): [Errno 2] No such file or directory: '/mnt/data/las_32_672_5684_1_th_2020-2025.laz'
+Error (17, 27): [Errno 2] No such file or directory: '/mnt/data/las_32_672_5684_1_th_2020-2025.laz'
+Error (17, 16): [Errno 2] No such file or directory: '/mnt/data/las_32_671_5674_1_th_2020-2025.laz'
+Error (17, 17): [Errno 2] No such file or directory: '/mnt/data/las_32_671_5674_1_th_2020-2025.laz'
+Processing successful. Syncing outputs to /user/pbasnet/u18501/th_data/Thuringia_processed_tiles/copc_tiles_X0065_Y0048...
+Done at 2026-03-24 15:35:09
+[cleanup] Removing /local/jobs/u18501_13103954/task_8
+============ Job Information ===================================================
+Submitted: 2026-03-24T15:34:03
+Started: 2026-03-24T15:34:04
+Ended: 2026-03-24T15:37:17
+Elapsed: 4 min, Limit: 119 min, Difference: 115 min
+CPUs: 192, Nodes: 1
+Estimated Consumption: 4.80 core-hours
+================================================================================

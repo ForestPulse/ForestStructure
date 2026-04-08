@@ -1,0 +1,93 @@
+================================================================================
+JobID = 13104523
+User = u18501, Account = nhr_ni_starter_24350
+Partition = medium96s, Nodelist = c0108
+================================================================================
+Extracting required input files (tiles 300-359) for cube X0064_Y0050...
+Copying 60 files to local SSD...
+======================================================
+Job Array ID : 5
+Cube ID      : X0064_Y0050
+Tile range   : 300 – 359
+Input files  : 60
+Workers      : 30
+Node         : c0108
+Temp dir     : /local/jobs/u18501_13104523/task_5
+Start time   : 2026-03-24 16:18:11
+======================================================
+/opt/conda/envs/pdalenv/lib/python3.12/site-packages/osgeo/ogr.py:615: FutureWarning: Neither ogr.UseExceptions() nor ogr.DontUseExceptions() has been explicitly called. In GDAL 4.0, exceptions will be enabled by default.
+  warnings.warn(
+Projecting FORCE cube X0064_Y0050 geometry from EPSG:25832 to EPSG:3035...
+FORCE cube X0064_Y0050 bounds (Aligned to EPSG:3035): (4376026.363042001, 3044919.6079649986, 4406026.363042001, 3074919.607965001)
+Node processing 60 subtiles with 30 workers.
+Success (10, 24): /local_ssd/output/las_4386026_3068920_x0064_y0050.copc.laz
+Error (11, 0): IoError: failed to fill whole buffer
+Error (11, 1): IoError: failed to fill whole buffer
+Error (11, 2): IoError: failed to fill whole buffer
+Success (10, 7): /local_ssd/output/las_4386026_3051920_x0064_y0050.copc.laz
+Success (10, 20): /local_ssd/output/las_4386026_3064920_x0064_y0050.copc.laz
+Success (10, 18): /local_ssd/output/las_4386026_3062920_x0064_y0050.copc.laz
+Success (10, 8): /local_ssd/output/las_4386026_3052920_x0064_y0050.copc.laz
+Success (10, 11): /local_ssd/output/las_4386026_3055920_x0064_y0050.copc.laz
+Success (10, 19): /local_ssd/output/las_4386026_3063920_x0064_y0050.copc.laz
+Success (10, 0): /local_ssd/output/las_4386026_3044920_x0064_y0050.copc.laz
+Success (10, 21): /local_ssd/output/las_4386026_3065920_x0064_y0050.copc.laz
+Success (10, 10): /local_ssd/output/las_4386026_3054920_x0064_y0050.copc.laz
+Success (10, 4): /local_ssd/output/las_4386026_3048920_x0064_y0050.copc.laz
+Success (10, 6): /local_ssd/output/las_4386026_3050920_x0064_y0050.copc.laz
+Success (10, 25): /local_ssd/output/las_4386026_3069920_x0064_y0050.copc.laz
+Success (10, 9): /local_ssd/output/las_4386026_3053920_x0064_y0050.copc.laz
+Success (10, 12): /local_ssd/output/las_4386026_3056920_x0064_y0050.copc.laz
+Success (10, 17): /local_ssd/output/las_4386026_3061920_x0064_y0050.copc.laz
+Success (10, 28): /local_ssd/output/las_4386026_3072920_x0064_y0050.copc.laz
+Success (10, 1): /local_ssd/output/las_4386026_3045920_x0064_y0050.copc.laz
+Success (10, 29): /local_ssd/output/las_4386026_3073920_x0064_y0050.copc.laz
+Success (10, 22): /local_ssd/output/las_4386026_3066920_x0064_y0050.copc.laz
+Success (10, 23): /local_ssd/output/las_4386026_3067920_x0064_y0050.copc.laz
+Success (10, 5): /local_ssd/output/las_4386026_3049920_x0064_y0050.copc.laz
+Success (10, 26): /local_ssd/output/las_4386026_3070920_x0064_y0050.copc.laz
+Success (10, 14): /local_ssd/output/las_4386026_3058920_x0064_y0050.copc.laz
+Success (10, 3): /local_ssd/output/las_4386026_3047920_x0064_y0050.copc.laz
+Success (10, 13): /local_ssd/output/las_4386026_3057920_x0064_y0050.copc.laz
+Success (10, 15): /local_ssd/output/las_4386026_3059920_x0064_y0050.copc.laz
+Success (10, 27): /local_ssd/output/las_4386026_3071920_x0064_y0050.copc.laz
+Success (10, 2): /local_ssd/output/las_4386026_3046920_x0064_y0050.copc.laz
+Success (10, 16): /local_ssd/output/las_4386026_3060920_x0064_y0050.copc.laz
+Success (11, 6): /local_ssd/output/las_4387026_3050920_x0064_y0050.copc.laz
+Success (11, 7): /local_ssd/output/las_4387026_3051920_x0064_y0050.copc.laz
+Success (11, 3): /local_ssd/output/las_4387026_3047920_x0064_y0050.copc.laz
+Success (11, 5): /local_ssd/output/las_4387026_3049920_x0064_y0050.copc.laz
+Success (11, 4): /local_ssd/output/las_4387026_3048920_x0064_y0050.copc.laz
+Success (11, 21): /local_ssd/output/las_4387026_3065920_x0064_y0050.copc.laz
+Success (11, 8): /local_ssd/output/las_4387026_3052920_x0064_y0050.copc.laz
+Success (11, 9): /local_ssd/output/las_4387026_3053920_x0064_y0050.copc.laz
+Success (11, 11): /local_ssd/output/las_4387026_3055920_x0064_y0050.copc.laz
+Success (11, 26): /local_ssd/output/las_4387026_3070920_x0064_y0050.copc.laz
+Success (11, 17): /local_ssd/output/las_4387026_3061920_x0064_y0050.copc.laz
+Success (11, 20): /local_ssd/output/las_4387026_3064920_x0064_y0050.copc.laz
+Success (11, 16): /local_ssd/output/las_4387026_3060920_x0064_y0050.copc.laz
+Success (11, 19): /local_ssd/output/las_4387026_3063920_x0064_y0050.copc.laz
+Success (11, 12): /local_ssd/output/las_4387026_3056920_x0064_y0050.copc.laz
+Success (11, 18): /local_ssd/output/las_4387026_3062920_x0064_y0050.copc.laz
+Success (11, 10): /local_ssd/output/las_4387026_3054920_x0064_y0050.copc.laz
+Success (11, 25): /local_ssd/output/las_4387026_3069920_x0064_y0050.copc.laz
+Success (11, 15): /local_ssd/output/las_4387026_3059920_x0064_y0050.copc.laz
+Success (11, 27): /local_ssd/output/las_4387026_3071920_x0064_y0050.copc.laz
+Success (11, 29): /local_ssd/output/las_4387026_3073920_x0064_y0050.copc.laz
+Success (11, 13): /local_ssd/output/las_4387026_3057920_x0064_y0050.copc.laz
+Success (11, 24): /local_ssd/output/las_4387026_3068920_x0064_y0050.copc.laz
+Success (11, 28): /local_ssd/output/las_4387026_3072920_x0064_y0050.copc.laz
+Success (11, 14): /local_ssd/output/las_4387026_3058920_x0064_y0050.copc.laz
+Success (11, 22): /local_ssd/output/las_4387026_3066920_x0064_y0050.copc.laz
+Success (11, 23): /local_ssd/output/las_4387026_3067920_x0064_y0050.copc.laz
+Processing successful. Syncing outputs to /user/pbasnet/u18501/th_data/Thuringia_processed_tiles/copc_tiles_X0064_Y0050...
+Done at 2026-03-24 16:48:15
+[cleanup] Removing /local/jobs/u18501_13104523/task_5
+============ Job Information ===================================================
+Submitted: 2026-03-24T16:16:28
+Started: 2026-03-24T16:16:31
+Ended: 2026-03-24T16:48:17
+Elapsed: 32 min, Limit: 119 min, Difference: 87 min
+CPUs: 192, Nodes: 1
+Estimated Consumption: 38.40 core-hours
+================================================================================

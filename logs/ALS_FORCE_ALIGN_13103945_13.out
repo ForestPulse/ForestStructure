@@ -1,0 +1,53 @@
+================================================================================
+JobID = 13103959
+User = u18501, Account = nhr_ni_starter_24350
+Partition = medium96s, Nodelist = c0115
+================================================================================
+Extracting required input files (tiles 780-839) for cube X0065_Y0048...
+Copying 0 files to local SSD...
+======================================================
+Job Array ID : 13
+Cube ID      : X0065_Y0048
+Tile range   : 780 – 839
+Input files  : 0
+Workers      : 30
+Node         : c0115
+Temp dir     : /local/jobs/u18501_13103959/task_13
+Start time   : 2026-03-24 15:34:13
+======================================================
+/opt/conda/envs/pdalenv/lib/python3.12/site-packages/osgeo/ogr.py:615: FutureWarning: Neither ogr.UseExceptions() nor ogr.DontUseExceptions() has been explicitly called. In GDAL 4.0, exceptions will be enabled by default.
+  warnings.warn(
+Projecting FORCE cube X0065_Y0048 geometry from EPSG:25832 to EPSG:3035...
+FORCE cube X0065_Y0048 bounds (Aligned to EPSG:3035): (4406026.363042001, 3104919.607964999, 4436026.363042001, 3134919.607965)
+Node processing 20 subtiles with 30 workers.
+Error (26, 0): [Errno 2] No such file or directory: '/mnt/data/las_32_681_5657_1_th_2020-2025.laz'
+Error (26, 1): [Errno 2] No such file or directory: '/mnt/data/las_32_682_5658_1_th_2020-2025.laz'
+Error (26, 3): [Errno 2] No such file or directory: '/mnt/data/las_32_681_5660_1_th_2020-2025.laz'
+Error (26, 5): [Errno 2] No such file or directory: '/mnt/data/las_32_682_5662_1_th_2020-2025.laz'
+Error (26, 6): [Errno 2] No such file or directory: '/mnt/data/las_32_680_5663_1_th_2020-2025.laz'
+Error (26, 4): [Errno 2] No such file or directory: '/mnt/data/las_32_682_5661_1_th_2020-2025.laz'
+Error (26, 7): [Errno 2] No such file or directory: '/mnt/data/las_32_681_5664_1_th_2020-2025.laz'
+Error (26, 8): [Errno 2] No such file or directory: '/mnt/data/las_32_680_5665_1_th_2020-2025.laz'
+Error (27, 2): [Errno 2] No such file or directory: '/mnt/data/las_32_682_5659_1_th_2020-2025.laz'
+Error (26, 2): [Errno 2] No such file or directory: '/mnt/data/las_32_682_5659_1_th_2020-2025.laz'
+Error (27, 5): [Errno 2] No such file or directory: '/mnt/data/las_32_682_5662_1_th_2020-2025.laz'
+Error (27, 1): [Errno 2] No such file or directory: '/mnt/data/las_32_683_5658_1_th_2020-2025.laz'
+Error (27, 0): [Errno 2] No such file or directory: '/mnt/data/las_32_682_5657_1_th_2020-2025.laz'
+Error (26, 9): [Errno 2] No such file or directory: '/mnt/data/las_32_680_5666_1_th_2020-2025.laz'
+Error (27, 3): [Errno 2] No such file or directory: '/mnt/data/las_32_683_5660_1_th_2020-2025.laz'
+Error (27, 7): [Errno 2] No such file or directory: '/mnt/data/las_32_681_5664_1_th_2020-2025.laz'
+Error (27, 6): [Errno 2] No such file or directory: '/mnt/data/las_32_681_5663_1_th_2020-2025.laz'
+Error (27, 4): [Errno 2] No such file or directory: '/mnt/data/las_32_683_5661_1_th_2020-2025.laz'
+Error (27, 9): [Errno 2] No such file or directory: '/mnt/data/las_32_681_5666_1_th_2020-2025.laz'
+Error (27, 8): [Errno 2] No such file or directory: '/mnt/data/las_32_681_5665_1_th_2020-2025.laz'
+Processing successful. Syncing outputs to /user/pbasnet/u18501/th_data/Thuringia_processed_tiles/copc_tiles_X0065_Y0048...
+Done at 2026-03-24 15:34:20
+[cleanup] Removing /local/jobs/u18501_13103959/task_13
+============ Job Information ===================================================
+Submitted: 2026-03-24T15:34:03
+Started: 2026-03-24T15:34:04
+Ended: 2026-03-24T15:34:21
+Elapsed: 1 min, Limit: 119 min, Difference: 118 min
+CPUs: 192, Nodes: 1
+Estimated Consumption: 1.20 core-hours
+================================================================================

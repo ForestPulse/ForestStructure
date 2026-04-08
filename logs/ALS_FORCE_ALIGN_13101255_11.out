@@ -1,0 +1,40 @@
+================================================================================
+JobID = 13101286
+User = u18501, Account = nhr_ni_starter_24350
+Partition = medium96s, Nodelist = c0110
+================================================================================
+mkdir: cannot create directory ‘/mnt/vast-nhr/projects/nhr_ni_starter_24350/data/shared/Thuringia_processed_tiles’: Permission denied
+cp: cannot stat '/user/pbasnet/u18501/ForestPulse_processing/Test_options/pdal_pc_level_reprojection/header_cache/header_cache_X0064_Y0050.pkl': No such file or directory
+Extracting required input files from header cache for cube X0064_Y0050...
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: '/local/jobs/u18501_13101286/static/header_cache_X0064_Y0050.pkl'
+Copying 0 required files to local SSD...
+======================================================
+Job Array ID : 11
+Cube ID      : X0064_Y0050
+Tile range   : 660 – 719
+Workers      : 30
+Node         : c0110
+Start time   : 2026-03-24 12:07:46
+======================================================
+/opt/conda/envs/pdalenv/lib/python3.12/site-packages/osgeo/ogr.py:615: FutureWarning: Neither ogr.UseExceptions() nor ogr.DontUseExceptions() has been explicitly called. In GDAL 4.0, exceptions will be enabled by default.
+  warnings.warn(
+Projecting FORCE cube X0064_Y0050 geometry from EPSG:25832 to EPSG:3035...
+FORCE cube X0064_Y0050 bounds (Aligned to EPSG:3035): (4376026.363042001, 3044919.6079649986, 4406026.363042001, 3074919.607965001)
+Traceback (most recent call last):
+  File "/user/pbasnet/u18501/ForestPulse_processing/Test_options/pdal_pc_level_reprojection/pdal_pc_level_reprojection.py", line 259, in <module>
+    main()
+  File "/user/pbasnet/u18501/ForestPulse_processing/Test_options/pdal_pc_level_reprojection/pdal_pc_level_reprojection.py", line 208, in main
+    with open(args.header_cache, "rb") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/local_ssd/static/header_cache_X0064_Y0050.pkl'
+Job failed with exit code 1.
+============ Job Information ===================================================
+Submitted: 2026-03-24T12:05:44
+Started: 2026-03-24T12:07:38
+Ended: 2026-03-24T12:07:58
+Elapsed: 1 min, Limit: 119 min, Difference: 118 min
+CPUs: 192, Nodes: 1
+Estimated Consumption: 1.20 core-hours
+================================================================================

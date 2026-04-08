@@ -1,0 +1,90 @@
+================================================================================
+JobID = 13104066
+User = u18501, Account = nhr_ni_starter_24350
+Partition = medium96s, Nodelist = c0109
+================================================================================
+Extracting required input files (tiles 420-479) for cube X0065_Y0048...
+Copying 60 files to local SSD...
+======================================================
+Job Array ID : 7
+Cube ID      : X0065_Y0048
+Tile range   : 420 – 479
+Input files  : 60
+Workers      : 30
+Node         : c0109
+Temp dir     : /local/jobs/u18501_13104066/task_7
+Start time   : 2026-03-24 15:44:59
+======================================================
+/opt/conda/envs/pdalenv/lib/python3.12/site-packages/osgeo/ogr.py:615: FutureWarning: Neither ogr.UseExceptions() nor ogr.DontUseExceptions() has been explicitly called. In GDAL 4.0, exceptions will be enabled by default.
+  warnings.warn(
+Projecting FORCE cube X0065_Y0048 geometry from EPSG:25832 to EPSG:3035...
+FORCE cube X0065_Y0048 bounds (Aligned to EPSG:3035): (4406026.363042001, 3104919.607964999, 4436026.363042001, 3134919.607965)
+Node processing 57 subtiles with 30 workers.
+Success (14, 19): /local_ssd/output/las_4420026_3123920_x0065_y0048.copc.laz
+Success (14, 0): /local_ssd/output/las_4420026_3104920_x0065_y0048.copc.laz
+Success (14, 1): /local_ssd/output/las_4420026_3105920_x0065_y0048.copc.laz
+Success (14, 2): /local_ssd/output/las_4420026_3106920_x0065_y0048.copc.laz
+Success (15, 0): /local_ssd/output/las_4421026_3104920_x0065_y0048.copc.laz
+Success (14, 21): /local_ssd/output/las_4420026_3125920_x0065_y0048.copc.laz
+Success (15, 1): /local_ssd/output/las_4421026_3105920_x0065_y0048.copc.laz
+Success (14, 4): /local_ssd/output/las_4420026_3108920_x0065_y0048.copc.laz
+Success (14, 22): /local_ssd/output/las_4420026_3126920_x0065_y0048.copc.laz
+Success (14, 29): /local_ssd/output/las_4420026_3133920_x0065_y0048.copc.laz
+Success (14, 28): /local_ssd/output/las_4420026_3132920_x0065_y0048.copc.laz
+Success (14, 25): /local_ssd/output/las_4420026_3129920_x0065_y0048.copc.laz
+Success (14, 23): /local_ssd/output/las_4420026_3127920_x0065_y0048.copc.laz
+Success (14, 3): /local_ssd/output/las_4420026_3107920_x0065_y0048.copc.laz
+Success (14, 26): /local_ssd/output/las_4420026_3130920_x0065_y0048.copc.laz
+Success (14, 6): /local_ssd/output/las_4420026_3110920_x0065_y0048.copc.laz
+Success (14, 18): /local_ssd/output/las_4420026_3122920_x0065_y0048.copc.laz
+Success (14, 7): /local_ssd/output/las_4420026_3111920_x0065_y0048.copc.laz
+Success (14, 24): /local_ssd/output/las_4420026_3128920_x0065_y0048.copc.laz
+Success (14, 9): /local_ssd/output/las_4420026_3113920_x0065_y0048.copc.laz
+Success (14, 27): /local_ssd/output/las_4420026_3131920_x0065_y0048.copc.laz
+Success (14, 16): /local_ssd/output/las_4420026_3120920_x0065_y0048.copc.laz
+Success (14, 10): /local_ssd/output/las_4420026_3114920_x0065_y0048.copc.laz
+Success (15, 22): /local_ssd/output/las_4421026_3126920_x0065_y0048.copc.laz
+Success (15, 19): /local_ssd/output/las_4421026_3123920_x0065_y0048.copc.laz
+Success (14, 8): /local_ssd/output/las_4420026_3112920_x0065_y0048.copc.laz
+Success (14, 5): /local_ssd/output/las_4420026_3109920_x0065_y0048.copc.laz
+Success (14, 11): /local_ssd/output/las_4420026_3115920_x0065_y0048.copc.laz
+Success (14, 12): /local_ssd/output/las_4420026_3116920_x0065_y0048.copc.laz
+Success (14, 17): /local_ssd/output/las_4420026_3121920_x0065_y0048.copc.laz
+Success (15, 4): /local_ssd/output/las_4421026_3108920_x0065_y0048.copc.laz
+Success (15, 3): /local_ssd/output/las_4421026_3107920_x0065_y0048.copc.laz
+Success (15, 5): /local_ssd/output/las_4421026_3109920_x0065_y0048.copc.laz
+Success (15, 7): /local_ssd/output/las_4421026_3111920_x0065_y0048.copc.laz
+Success (15, 6): /local_ssd/output/las_4421026_3110920_x0065_y0048.copc.laz
+Success (14, 13): /local_ssd/output/las_4420026_3117920_x0065_y0048.copc.laz
+Success (15, 2): /local_ssd/output/las_4421026_3106920_x0065_y0048.copc.laz
+Success (14, 14): /local_ssd/output/las_4420026_3118920_x0065_y0048.copc.laz
+Success (15, 9): /local_ssd/output/las_4421026_3113920_x0065_y0048.copc.laz
+Success (15, 10): /local_ssd/output/las_4421026_3114920_x0065_y0048.copc.laz
+Success (15, 12): /local_ssd/output/las_4421026_3116920_x0065_y0048.copc.laz
+Success (15, 13): /local_ssd/output/las_4421026_3117920_x0065_y0048.copc.laz
+Success (15, 8): /local_ssd/output/las_4421026_3112920_x0065_y0048.copc.laz
+Success (15, 17): /local_ssd/output/las_4421026_3121920_x0065_y0048.copc.laz
+Success (15, 25): /local_ssd/output/las_4421026_3129920_x0065_y0048.copc.laz
+Success (15, 29): /local_ssd/output/las_4421026_3133920_x0065_y0048.copc.laz
+Success (15, 26): /local_ssd/output/las_4421026_3130920_x0065_y0048.copc.laz
+Success (15, 27): /local_ssd/output/las_4421026_3131920_x0065_y0048.copc.laz
+Success (15, 28): /local_ssd/output/las_4421026_3132920_x0065_y0048.copc.laz
+Success (15, 24): /local_ssd/output/las_4421026_3128920_x0065_y0048.copc.laz
+Success (14, 15): /local_ssd/output/las_4420026_3119920_x0065_y0048.copc.laz
+Success (15, 11): /local_ssd/output/las_4421026_3115920_x0065_y0048.copc.laz
+Success (15, 23): /local_ssd/output/las_4421026_3127920_x0065_y0048.copc.laz
+Success (15, 18): /local_ssd/output/las_4421026_3122920_x0065_y0048.copc.laz
+Success (15, 16): /local_ssd/output/las_4421026_3120920_x0065_y0048.copc.laz
+Success (15, 14): /local_ssd/output/las_4421026_3118920_x0065_y0048.copc.laz
+Success (15, 15): /local_ssd/output/las_4421026_3119920_x0065_y0048.copc.laz
+Processing successful. Syncing outputs to /user/pbasnet/u18501/th_data/Thuringia_processed_tiles/copc_tiles_X0065_Y0048...
+Done at 2026-03-24 16:08:08
+[cleanup] Removing /local/jobs/u18501_13104066/task_7
+============ Job Information ===================================================
+Submitted: 2026-03-24T15:43:08
+Started: 2026-03-24T15:44:06
+Ended: 2026-03-24T16:08:09
+Elapsed: 25 min, Limit: 119 min, Difference: 94 min
+CPUs: 192, Nodes: 1
+Estimated Consumption: 30.00 core-hours
+================================================================================

@@ -1,0 +1,93 @@
+================================================================================
+JobID = 13103622
+User = u18501, Account = nhr_ni_starter_24350
+Partition = medium96s, Nodelist = c0104
+================================================================================
+Extracting required input files (tiles 480-539) for cube X0064_Y0050...
+Copying 60 files to local SSD...
+======================================================
+Job Array ID : 8
+Cube ID      : X0064_Y0050
+Tile range   : 480 – 539
+Input files  : 60
+Workers      : 30
+Node         : c0104
+Temp dir     : /local/jobs/u18501_13103622/task_8
+Start time   : 2026-03-24 15:16:55
+======================================================
+/opt/conda/envs/pdalenv/lib/python3.12/site-packages/osgeo/ogr.py:615: FutureWarning: Neither ogr.UseExceptions() nor ogr.DontUseExceptions() has been explicitly called. In GDAL 4.0, exceptions will be enabled by default.
+  warnings.warn(
+Projecting FORCE cube X0064_Y0050 geometry from EPSG:25832 to EPSG:3035...
+FORCE cube X0064_Y0050 bounds (Aligned to EPSG:3035): (4376026.363042001, 3044919.6079649986, 4406026.363042001, 3074919.607965001)
+Node processing 60 subtiles with 30 workers.
+Error (16, 0): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5597_1_th_2020-2025.laz'
+Error (16, 1): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5598_1_th_2020-2025.laz'
+Error (16, 4): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5601_1_th_2020-2025.laz'
+Error (16, 3): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_641_5600_1_th_2020-2025.laz'
+Error (16, 9): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_641_5606_1_th_2020-2025.laz'
+Error (16, 2): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_641_5599_1_th_2020-2025.laz'
+Error (16, 7): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5604_1_th_2020-2025.laz'
+Error (16, 8): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_641_5605_1_th_2020-2025.laz'
+Error (16, 6): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5603_1_th_2020-2025.laz'
+Error (16, 12): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_641_5609_1_th_2020-2025.laz'
+Error (16, 10): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5607_1_th_2020-2025.laz'
+Error (16, 11): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5608_1_th_2020-2025.laz'
+Error (16, 5): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5602_1_th_2020-2025.laz'
+Error (16, 15): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5612_1_th_2020-2025.laz'
+Error (16, 14): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5611_1_th_2020-2025.laz'
+Error (16, 13): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_641_5610_1_th_2020-2025.laz'
+Error (16, 17): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5614_1_th_2020-2025.laz'
+Error (16, 18): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_641_5615_1_th_2020-2025.laz'
+Error (16, 16): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5613_1_th_2020-2025.laz'
+Error (16, 19): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5616_1_th_2020-2025.laz'
+Error (16, 20): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5617_1_th_2020-2025.laz'
+Error (16, 21): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5618_1_th_2020-2025.laz'
+Error (16, 24): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_641_5621_1_th_2020-2025.laz'
+Error (16, 25): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_641_5622_1_th_2020-2025.laz'
+Error (16, 22): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5619_1_th_2020-2025.laz'
+Error (16, 26): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5623_1_th_2020-2025.laz'
+Error (16, 23): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_641_5620_1_th_2020-2025.laz'
+Error (16, 27): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5624_1_th_2020-2025.laz'
+Error (17, 0): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5597_1_th_2020-2025.laz'
+Error (17, 1): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_643_5598_1_th_2020-2025.laz'
+Error (16, 28): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5625_1_th_2020-2025.laz'
+Error (17, 2): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_643_5599_1_th_2020-2025.laz'
+Error (16, 29): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_641_5626_1_th_2020-2025.laz'
+Error (17, 3): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_643_5600_1_th_2020-2025.laz'
+Error (17, 4): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5601_1_th_2020-2025.laz'
+Error (17, 5): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5602_1_th_2020-2025.laz'
+Error (17, 6): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5603_1_th_2020-2025.laz'
+Error (17, 7): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5604_1_th_2020-2025.laz'
+Error (17, 9): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5606_1_th_2020-2025.laz'
+Error (17, 10): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5607_1_th_2020-2025.laz'
+Error (17, 8): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_643_5605_1_th_2020-2025.laz'
+Error (17, 11): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5608_1_th_2020-2025.laz'
+Error (17, 12): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_643_5609_1_th_2020-2025.laz'
+Error (17, 13): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5610_1_th_2020-2025.laz'
+Error (17, 14): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_643_5611_1_th_2020-2025.laz'
+Error (17, 15): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_643_5612_1_th_2020-2025.laz'
+Error (17, 17): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5614_1_th_2020-2025.laz'
+Error (17, 16): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5613_1_th_2020-2025.laz'
+Error (17, 18): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_643_5615_1_th_2020-2025.laz'
+Error (17, 20): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5617_1_th_2020-2025.laz'
+Error (17, 19): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5616_1_th_2020-2025.laz'
+Error (17, 21): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5618_1_th_2020-2025.laz'
+Error (17, 22): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5619_1_th_2020-2025.laz'
+Error (17, 23): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5620_1_th_2020-2025.laz'
+Error (17, 25): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_643_5622_1_th_2020-2025.laz'
+Error (17, 28): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_643_5625_1_th_2020-2025.laz'
+Error (17, 26): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_643_5623_1_th_2020-2025.laz'
+Error (17, 24): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_642_5621_1_th_2020-2025.laz'
+Error (17, 29): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_643_5626_1_th_2020-2025.laz'
+Error (17, 27): [Errno 2] No such file or directory: '/mnt/data/Thuringia_2020_2025_tiles/las_32_643_5624_1_th_2020-2025.laz'
+Processing successful. Syncing outputs to /user/pbasnet/u18501/th_data/Thuringia_processed_tiles/copc_tiles_X0064_Y0050...
+Done at 2026-03-24 15:16:59
+[cleanup] Removing /local/jobs/u18501_13103622/task_8
+============ Job Information ===================================================
+Submitted: 2026-03-24T15:15:04
+Started: 2026-03-24T15:15:38
+Ended: 2026-03-24T15:17:01
+Elapsed: 2 min, Limit: 119 min, Difference: 117 min
+CPUs: 192, Nodes: 1
+Estimated Consumption: 2.40 core-hours
+================================================================================

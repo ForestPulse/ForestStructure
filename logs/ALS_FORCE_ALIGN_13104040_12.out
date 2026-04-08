@@ -1,0 +1,53 @@
+================================================================================
+JobID = 13104071
+User = u18501, Account = nhr_ni_starter_24350
+Partition = medium96s, Nodelist = c0114
+================================================================================
+Extracting required input files (tiles 720-779) for cube X0065_Y0048...
+Copying 0 files to local SSD...
+======================================================
+Job Array ID : 12
+Cube ID      : X0065_Y0048
+Tile range   : 720 – 779
+Input files  : 0
+Workers      : 30
+Node         : c0114
+Temp dir     : /local/jobs/u18501_13104071/task_12
+Start time   : 2026-03-24 15:44:12
+======================================================
+/opt/conda/envs/pdalenv/lib/python3.12/site-packages/osgeo/ogr.py:615: FutureWarning: Neither ogr.UseExceptions() nor ogr.DontUseExceptions() has been explicitly called. In GDAL 4.0, exceptions will be enabled by default.
+  warnings.warn(
+Projecting FORCE cube X0065_Y0048 geometry from EPSG:25832 to EPSG:3035...
+FORCE cube X0065_Y0048 bounds (Aligned to EPSG:3035): (4406026.363042001, 3104919.607964999, 4436026.363042001, 3134919.607965)
+Node processing 20 subtiles with 30 workers.
+Success (24, 9): /local_ssd/output/las_4430026_3113920_x0065_y0048.copc.laz
+Success (25, 9): /local_ssd/output/las_4431026_3113920_x0065_y0048.copc.laz
+Success (25, 4): /local_ssd/output/las_4431026_3108920_x0065_y0048.copc.laz
+Success (25, 6): /local_ssd/output/las_4431026_3110920_x0065_y0048.copc.laz
+Success (24, 6): /local_ssd/output/las_4430026_3110920_x0065_y0048.copc.laz
+Success (25, 5): /local_ssd/output/las_4431026_3109920_x0065_y0048.copc.laz
+Success (24, 4): /local_ssd/output/las_4430026_3108920_x0065_y0048.copc.laz
+Success (24, 7): /local_ssd/output/las_4430026_3111920_x0065_y0048.copc.laz
+Success (25, 1): /local_ssd/output/las_4431026_3105920_x0065_y0048.copc.laz
+Success (24, 2): /local_ssd/output/las_4430026_3106920_x0065_y0048.copc.laz
+Success (24, 3): /local_ssd/output/las_4430026_3107920_x0065_y0048.copc.laz
+Success (24, 5): /local_ssd/output/las_4430026_3109920_x0065_y0048.copc.laz
+Success (25, 2): /local_ssd/output/las_4431026_3106920_x0065_y0048.copc.laz
+Success (25, 0): /local_ssd/output/las_4431026_3104920_x0065_y0048.copc.laz
+Success (25, 3): /local_ssd/output/las_4431026_3107920_x0065_y0048.copc.laz
+Success (24, 1): /local_ssd/output/las_4430026_3105920_x0065_y0048.copc.laz
+Success (25, 7): /local_ssd/output/las_4431026_3111920_x0065_y0048.copc.laz
+Success (25, 8): /local_ssd/output/las_4431026_3112920_x0065_y0048.copc.laz
+Success (24, 0): /local_ssd/output/las_4430026_3104920_x0065_y0048.copc.laz
+Success (24, 8): /local_ssd/output/las_4430026_3112920_x0065_y0048.copc.laz
+Processing successful. Syncing outputs to /user/pbasnet/u18501/th_data/Thuringia_processed_tiles/copc_tiles_X0065_Y0048...
+Done at 2026-03-24 15:46:57
+[cleanup] Removing /local/jobs/u18501_13104071/task_12
+============ Job Information ===================================================
+Submitted: 2026-03-24T15:43:08
+Started: 2026-03-24T15:44:06
+Ended: 2026-03-24T15:46:58
+Elapsed: 3 min, Limit: 119 min, Difference: 116 min
+CPUs: 192, Nodes: 1
+Estimated Consumption: 3.60 core-hours
+================================================================================

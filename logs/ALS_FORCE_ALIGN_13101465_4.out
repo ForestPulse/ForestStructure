@@ -1,0 +1,16 @@
+================================================================================
+JobID = 13101479
+User = u18501, Account = nhr_ni_starter_24350
+Partition = medium96s, Nodelist = c0103
+================================================================================
+Extracting required input files from header cache for cube X0064_Y0050...
+Copying 961 required files to local SSD...
+[2026-03-24T12:37:42.547] error: *** JOB 13101479 ON c0103 CANCELLED AT 2026-03-24T12:37:42 DUE to SIGNAL Terminated ***
+============ Job Information ===================================================
+Submitted: 2026-03-24T12:22:06
+Started: 2026-03-24T12:23:07
+Ended: 2026-03-24T12:38:11
+Elapsed: 15 min, Limit: 119 min, Difference: 104 min
+CPUs: 192, Nodes: 1
+Estimated Consumption: 18.00 core-hours
+================================================================================

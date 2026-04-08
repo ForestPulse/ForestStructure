@@ -14,7 +14,7 @@
       "limits":"Classification![7:7], ScanAngleRank[-20:20]"
     },
     {
-      "type":"filters.hag_nn",
+      "type":"filters.hag_delaunay",
       "allow_extrapolation": true
     },
     {
@@ -22,13 +22,8 @@
       "limits":"HeightAboveGround[0:100]"
     },
     {
-      "type":"filters.sample",
-      "cell":0.6
-    },
-    {
-      "type":"filters.reprojection",
-      "in_srs":"EPSG:25832",
-      "out_srs":"EPSG:3035"
+      "type":"filters.relaxationdartthrowing",
+      "count":10000000
     },
     {
       "type": "writers.copc",

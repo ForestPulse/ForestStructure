@@ -1,0 +1,22 @@
+================================================================================
+JobID = 13088997
+User = u18501, Account = nhr_ni_starter_24350
+Partition = medium96s, Nodelist = c0052
+================================================================================
+class       : SpatRaster 
+size        : 1802, 476, 3  (nrow, ncol, nlyr)
+resolution  : 10, 10  (x, y)
+extent      : 4311269, 4316029, 3056490, 3074510  (xmin, xmax, ymin, ymax)
+coord. ref. : ETRS89-extended / LAEA Europe (EPSG:3035) 
+source      : metrics_x0061_y0050.vrt 
+names       : topheight, canopycover,       vci 
+min values  :   0.00000,           0, 0.0000000 
+max values  :  42.36726,         100, 0.8861656 
+============ Job Information ===================================================
+Submitted: 2026-03-23T13:14:12
+Started: 2026-03-23T13:14:18
+Ended: 2026-03-23T13:14:40
+Elapsed: 1 min, Limit: 119 min, Difference: 118 min
+CPUs: 192, Nodes: 1
+Estimated Consumption: 1.20 core-hours
+================================================================================

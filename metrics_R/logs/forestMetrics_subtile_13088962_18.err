@@ -1,0 +1,21 @@
+Linking to GEOS 3.13.0, GDAL 3.10.0, PROJ 9.4.1; sf_use_s2() is TRUE
+
+Attaching package: ‘sf’
+
+The following object is masked from ‘package:lidR’:
+
+    st_concave_hull
+
+terra 1.9.1
+
+Attaching package: ‘terra’
+
+The following object is masked from ‘package:lidR’:
+
+    watershed
+
+900 COPC tiles found in /user/pbasnet/u18501/th_data/Thuringia_processed_tiles/copc_tiles_X0064_Y0049
+Processed : 900 / 900
+All tiles completed successfully
+Building VRT from 900 tiles ...
+Done -> /user/pbasnet/u18501/th_data/Thuringia_forestMetrics/metrics_X0064_Y0049/metrics_x0064_y0049.tif

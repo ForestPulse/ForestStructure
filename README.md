@@ -1,6 +1,7 @@
 # ALS Data provision and Preprocessing
+Preprocessing is an essential first step when working with large-scale ALS LiDAR data. Because datasets come from different sensors, flight settings, and acquisition periods, raw point clouds often vary in density, overlap, classification, and spatial reference. To make them analysis-ready, the data must be harmonized through steps such as reprojection, retiling, ground classification, point thinning, and height normalization. This provides standardized input for reliable forest analysis and metric computation. 
 
-ALS point cloud preprocessing pipeline for reprojection and retiling of Airborne Laser Scanning (ALS) data to align with the [FORCE Datacube](https://force-eo.readthedocs.io/) framework. Developed as part of the [ForestPulse](https://github.com/ForestPulse) project (Work Package 4) at HAWK Göttingen.
+This repository contains an ALS point cloud preprocessing pipeline for reprojection and retiling of Airborne Laser Scanning (ALS) data to align with the [FORCE Datacube](https://force-eo.readthedocs.io/) framework. It was developed as part of the [ForestPulse](https://github.com/ForestPulse) project (Work Package 4) at HAWK Göttingen.
 
 ---
 

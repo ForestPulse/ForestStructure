@@ -16,7 +16,7 @@ get_arg <- function(flag, default = NULL) {
   args[i + 1]
 }
 
-FORCE_CUBE_ID <- get_arg("--force_cube_id")
+FORCE_CUBE_ID <- "X0063_Y0050"  # get_arg("--force_cube_id") # modified FOR LOCAL TESTING
 COPC_ROOT     <- get_arg("--copc_root", ".")
 OUT_ROOT      <- get_arg("--out_root",  ".")
 N_WORKERS     <- as.integer(get_arg("--workers", "32"))  # use many cores on full node
@@ -37,7 +37,7 @@ failed_log  <- file.path(FINAL_DIR, paste0("failed_tiles_", id_lower, ".txt"))
 dir.create(OUT_DIR,   showWarnings = FALSE, recursive = TRUE)
 dir.create(FINAL_DIR, showWarnings = FALSE, recursive = TRUE)
 
-# ---- Metrics function -------------------------------------------------------
+# ---- Point metrics function -------------------------------------------------------
 forest_metrics <- function(hag, th = 2, zmax_cap = 60, by = 1) {
   total_pts <- length(hag)
   n_above2  <- sum(hag > th)
@@ -59,6 +59,19 @@ forest_metrics <- function(hag, th = 2, zmax_cap = 60, by = 1) {
   )
 }
 
+# ---- CHM metrics function ---------------------------------------------------
+chm_metrics <- function(raster){
+  
+  vec <- na.omit(as.vector(raster))
+  
+  res <- c(meanH = mean(vec),
+           maxH = max(vec),
+           over02 = sum(vec>2)/length(vec),
+           over05 = sum(vec>5)/length(vec),
+           over20 = sum(vec>20)/length(vec))
+  return(res)
+}
+
 # ---- Per-tile worker (with tempdir + parallel) ------------------------------
 process_tile <- function(copc_file, out_dir) {
   tile_id  <- tools::file_path_sans_ext(
@@ -72,7 +85,8 @@ process_tile <- function(copc_file, out_dir) {
   tryCatch({
     # copy COPC to fast local storage
     file.copy(copc_file, tmp_copc, overwrite = TRUE)
-
+    
+    ## read LAS
     ctg <- lidR::readLAScatalog(tmp_copc)
     lidR::opt_chunk_size(ctg)   <- 0
     lidR::opt_chunk_buffer(ctg) <- 0
@@ -80,17 +94,65 @@ process_tile <- function(copc_file, out_dir) {
 
     xmin <- ctg@data$Min.X
     ymin <- ctg@data$Min.Y
+    
+    ## read species data
+    spec.tile.name <- paste0("mnt/vast-nhr/projects/nhr_ni_starter_24350/data/", 
+                             "tree_species_fractions/tree_species_fractions_",
+                             FORCE_CUBE_ID,
+                             ".cog.tif")
+    spec.tile <- terra::rast(spec.tile.name)
+    spec.crop <- terra::crop(spec.tile, terra::ext(p.m), snap = "in")
+    # calculate density layer from species composition
+    spec.crop$dens <-spec.crop$tree_species_fractions.cog_1 * 0.0038 +
+      spec.crop$tree_species_fractions.cog_2 * 0.0044 +
+      spec.crop$tree_species_fractions.cog_3 * 0.0042 +
+      spec.crop$tree_species_fractions.cog_4 * 0.0044 +
+      spec.crop$tree_species_fractions.cog_5 * 0.0048 +
+      spec.crop$tree_species_fractions.cog_6 * 0.006 +
+      spec.crop$tree_species_fractions.cog_7 * 0.0061 +
+      spec.crop$tree_species_fractions.cog_8 * 0.0052 +
+      spec.crop$tree_species_fractions.cog_9 * 0.0055 +
+      spec.crop$tree_species_fractions.cog_10 * 0.0045 +
+      spec.crop$tree_species_fractions.cog_11 * 0.0043 +
+      spec.crop$tree_species_fractions.cog_12 * 0.005 +
+      spec.crop$tree_species_fractions.cog_13 * 0.005 +
+      spec.crop$tree_species_fractions.cog_14 * 0.005
+    # all missing or erroneous values will be set to 0.5
+    spec.crop[is.na(spec.crop$dens) | 
+                spec.crop$dens < 0.38 | 
+                spec.crop$dens > 0.61 ] <- 0.5
+    
 
-    m <- lidR::pixel_metrics(
+    ## pixel metrics
+    p.m <- lidR::pixel_metrics(
       ctg,
       ~forest_metrics(HeightAboveGround),
       res   = 10,
       start = c(xmin, ymin)
     )
+    p.m <- terra::crop(p.m, terra::ext(ctg))
+    names(p.m) <- c("topheight", "canopycover", "vci")
 
-    m <- terra::crop(m, terra::ext(ctg))
-    names(m) <- c("topheight", "canopycover", "vci")
+    ## chm metrics
+    chm.resolution.template <- terra::disagg(p.m$topheight, 20)
+    # create chm
+    chm <- lidR::rasterize_canopy(ctg, p2r(0.25), res = chm.resolution.template)
+    # aggregate to 10m pixels
+    chm.agg <- terra::aggregate(chm, fact = 20, fun = "chm_metrics")
+    names(chm.agg) <- names(chm_metrics(c(1,2,3,4)))
 
+    # merge into one raster
+    spec.crop.aligned <- terra::resample(spec.crop, p.m) # This should not be necessary
+    m <- c(p.m, chm.agg, spec.crop.aligned$dens)
+    
+    
+    # calculate target variables
+    m$vol <- 3.4838 * m$meanH^1.3921 * m$dens^-0.76431
+    m$biom <- 4.988 * m$meanH^1.343 * m$dens^0.3047
+    m$ba <- 2.1713 * m$meanH^0.75521 * m$dens^-0.71128
+
+    
+    # write
     terra::writeRaster(
       m, out_file, overwrite = TRUE,
       gdal = c("COMPRESS=LZW", "TILED=YES",
@@ -123,6 +185,7 @@ results <- future_lapply(
   process_tile,
   out_dir         = OUT_DIR,
   future.globals  = list(forest_metrics = forest_metrics,
+                         chm_metrics    = chm_metrics,
                          process_tile   = process_tile),
   future.packages = c("lidR", "terra"),
   future.seed     = TRUE

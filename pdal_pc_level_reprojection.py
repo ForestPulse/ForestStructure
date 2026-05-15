@@ -14,6 +14,8 @@ from shapely.ops import transform as shapely_transform
 from shapely.strtree import STRtree
 from osgeo import ogr
 from shapely.wkb import loads as load_wkb
+import sys
+import traceback
 
 # --- Configuration & Constants ---
 CHUNK_SIZE = 5_000_000  # points per chunk
@@ -93,6 +95,7 @@ def process_single_subtile(tile_data, input_epsg, output_epsg, out_dir, force_cu
             return f"Empty {tile_data['idx']}"
 
         full_array = np.concatenate(all_chunks)
+        total_points = len(full_array)
 
         # 4) PDAL pipeline
         pipeline_json =[
@@ -117,7 +120,7 @@ def process_single_subtile(tile_data, input_epsg, output_epsg, out_dir, force_cu
 
         pipeline = pdal.Pipeline(json.dumps(pipeline_json), arrays=[full_array])
         pipeline.execute()
-        return f"Success {tile_data['idx']}: {out_path}"
+        return f"Success {tile_data['idx']}: {out_path} ({total_points} points)"
 
     except Exception as e:
         return f"Error {tile_data['idx']}: {str(e)}"
@@ -242,6 +245,9 @@ def main():
     os.makedirs(args.output_laz_dir, exist_ok=True)
 
     # --- Step 5: run workers ---
+    failed_count = 0
+    success_count = 0
+    
     with ProcessPoolExecutor(max_workers=args.num_workers) as executor:
         futures = {
             executor.submit(process_single_subtile,
@@ -253,7 +259,28 @@ def main():
             for item in work_queue
         }
         for future in as_completed(futures):
-            print(future.result())
+            try:
+                result = future.result(timeout=300)  # 5 min timeout per subtile
+                print(result)
+                if result.startswith("Success"):
+                    success_count += 1
+                elif result.startswith("Error"):
+                    failed_count += 1
+            except TimeoutError:
+                failed_count += 1
+                item = futures[future]
+                print(f"ERROR {item['idx']}: Subtile processing timed out (>300s)", file=sys.stderr)
+            except Exception as e:
+                failed_count += 1
+                item = futures[future]
+                print(f"ERROR {item['idx']}: Worker crashed or returned invalid result", file=sys.stderr)
+                print(f"  Exception: {type(e).__name__}: {str(e)}", file=sys.stderr)
+                traceback.print_exc(file=sys.stderr)
+
+    print(f"\n=== Processing Summary ===")
+    print(f"Success: {success_count}")
+    print(f"Failed:  {failed_count}")
+    print(f"Total:   {len(work_queue)}")
 
 if __name__ == "__main__":
     main()

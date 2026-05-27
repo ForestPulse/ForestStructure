@@ -81,13 +81,29 @@ forest_metrics <- function(hag, th = 2, zmax_cap = 60, by = 1) {
 chm_metrics <- function(raster) {
   vec <- na.omit(as.vector(raster))
   if (length(vec) == 0)
-    return(c(meanH = 0, maxH = 0, over02 = 0, over05 = 0, over20 = 0))
+    return(c(meanH = 0, maxH = 0, over02 = 0, over05 = 0, over10 = 0, over15 = 0, 
+             over20 = 0, q95 = 0))
   c(meanH  = mean(vec),
     maxH   = max(vec),
     over02 = sum(vec > 2)  / length(vec),
     over05 = sum(vec > 5)  / length(vec),
-    over20 = sum(vec > 20) / length(vec))
+    over10 = sum(vec > 10) / length(vec),
+    over15 = sum(vec > 15) / length(vec),
+    over20 = sum(vec > 20) / length(vec),
+    q95 = unname(quantile(vec, 0.95)))
 }
+
+# ---- Function for GPStime ---------------------------------------------------
+
+most_frequent_day <- function(gpstimes){
+  # rounds to the nearest lower multiple of 864000 
+  # and returns the most frequent of those values
+  gpsdays <- as.numeric(names(sort(table(floor(gpstimes/86400)*86400), 
+                                   decreasing = T)))
+  # date <- as.Date(as.POSIXct(gpsdays[1], origin = "1980-01-06"))
+  return(gpsdays[1])
+}
+
 
 # ---- Per-tile worker --------------------------------------------------------
 process_tile <- function(copc_file, out_dir) {
@@ -137,35 +153,45 @@ process_tile <- function(copc_file, out_dir) {
       spec.crop$tree_species_fractions.cog_2  * 0.0044 +
       spec.crop$tree_species_fractions.cog_3  * 0.0042 +
       spec.crop$tree_species_fractions.cog_4  * 0.0044 +
-      spec.crop$tree_species_fractions.cog_5  * 0.0048 +
+      spec.crop$tree_species_fractions.cog_5  * 0.0049 +
       spec.crop$tree_species_fractions.cog_6  * 0.006  +
-      spec.crop$tree_species_fractions.cog_7  * 0.0061 +
-      spec.crop$tree_species_fractions.cog_8  * 0.0052 +
+      spec.crop$tree_species_fractions.cog_7  * 0.006 +
+      spec.crop$tree_species_fractions.cog_8  * 0.0051 +
       spec.crop$tree_species_fractions.cog_9  * 0.0055 +
-      spec.crop$tree_species_fractions.cog_10 * 0.0045 +
-      spec.crop$tree_species_fractions.cog_11 * 0.0043 +
-      spec.crop$tree_species_fractions.cog_12 * 0.005  +
-      spec.crop$tree_species_fractions.cog_13 * 0.005  +
-      spec.crop$tree_species_fractions.cog_14 * 0.005
+      spec.crop$tree_species_fractions.cog_10 * 0.0048 +
+      spec.crop$tree_species_fractions.cog_11 * 0.0046 +
+      spec.crop$tree_species_fractions.cog_12 * 0.0048  +
+      spec.crop$tree_species_fractions.cog_13 * 0.0048  +
+      spec.crop$tree_species_fractions.cog_14 * 0.0048
 
     bad <- is.na(spec.crop$dens) | spec.crop$dens < 0.38 | spec.crop$dens > 0.61
-    spec.crop$dens[bad] <- 0.5
+    spec.crop$dens[bad] <- 0.48
 
     ## CHM at 0.5 m then aggregate to 10 m
     chm.template <- terra::disagg(p.m$topheight, 20)
     chm <- lidR::rasterize_canopy(las, p2r(0.25), res = chm.template)
     rm(las); gc()
 
-    chm.agg <- terra::aggregate(chm, fact = 20, na.rm = TRUE,
+    chm.agg <- terra::aggregate(chm, fact = 20, na.rm = TRUE, 
                                 fun = function(x, ...) chm_metrics(x))
     terra::crs(chm.agg) <- "EPSG:3035"
     names(chm.agg) <- names(chm_metrics(1:4))
     chm.agg <- terra::resample(chm.agg, p.m, method = "near")
     chm.agg <- terra::subst(chm.agg, NA, 0)
-
+    
+    # extract gpstime
+    day <- lidR::pixel_metrics(
+      las, ~most_frequent_day(gpstime),
+      res   = 10,
+      start = c(tile_xmin, tile_ymin)
+    )
+    terra::crs(day) <- "EPSG:3035"
+    day <- terra::crop(day, tile_ext)
+    names(day) <- "gpstime_day"
+    
     ## merge all layers
     spec.aligned <- terra::resample(spec.crop, p.m, method = "near")
-    m <- c(p.m, chm.agg, spec.aligned$dens)
+    m <- c(p.m, chm.agg, spec.aligned$dens, day)
 
     ## target variables
     m$vol  <- 3.4838 * m$meanH^1.3921  * m$dens^-0.76431

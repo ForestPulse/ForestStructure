@@ -7,8 +7,8 @@
 #SBATCH --mem=250G
 #SBATCH --time=00:59:00
 #SBATCH --array=1-35
-#SBATCH --output=logs/forestMetrics_%A_%a.out
-#SBATCH --error=logs/forestMetrics_%A_%a.err
+#SBATCH --output=logs/forestMetrics_train_%A_%a.out
+#SBATCH --error=logs/forestMetrics_train_%A_%a.err
 
 module purge
 module load gcc/14.2.0
@@ -18,7 +18,7 @@ module load r/4.5.2
 
 mkdir -p logs
 
-cd /user/pbasnet/u18501/ForestPulse_processing/Test_options/metrics_R
+cd /user/pbasnet/u18501/ForestStructure/metrics_R/
 
 # --- Define all FORCE cube IDs here -----------------------------------------
 
@@ -36,12 +36,12 @@ FID=${FORCE_CUBE_IDS[$SLURM_ARRAY_TASK_ID - 1]}
 
 # --- Paths defined here, passed to R via args --------------------------------
 COPC_ROOT="/user/pbasnet/u18501/th_data/Thuringia_processed_tiles"
-OUT_ROOT="/user/pbasnet/u18501/ForestPulse_processing/Test_options/metrics_R"
+OUT_ROOT="/user/pbasnet/u18501/ForestPulse_processing/Test_options/metrics_R/Felix_training"
 SPEC_ROOT="/mnt/vast-nhr/projects/nhr_ni_starter_24350/data/tree_species_fractions"
 
 echo "[$(date)] Starting FORCE cube: $FID (task $SLURM_ARRAY_TASK_ID)"
 
-Rscript --vanilla forestMetrics_for_training.R \
+Rscript --vanilla forestMetrics_for_training.r \
   --force_cube_id "$FID" \
   --copc_root     "$COPC_ROOT" \
   --out_root      "$OUT_ROOT" \

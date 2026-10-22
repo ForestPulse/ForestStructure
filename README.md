@@ -113,6 +113,7 @@ for ID in "${CUBE_IDS[@]}"; do
   echo "Processing $ID..."
   echo "========================================"
 
+  module load apptainer
   apptainer exec \
     --bind /mnt/vast-nhr/projects/nhr_ni_starter_24350/data/shared/Thuringia_2020_2025_tiles:/mnt/data \
     --bind /user/pbasnet/u18501:/user/pbasnet/u18501 \

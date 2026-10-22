@@ -1,0 +1,13 @@
+spec_group	spec_deutsch	dens_old	willkuer	dens_new
+Picea	01Fichte	0,38	nein	0,38
+Pinus	02Kiefer	0,44	nein	0,44
+Abies	03Tanne	0,42	nein	0,42
+Pseudotsuga	04Douglasie	0,44	nein	0,44
+Larix	05Laerche	0,48	ja	0,49
+Fagus	06Buche	0,6	nein	0,6
+Quercus	07Eiche	0,61	ja	0,6
+Acer	08Ahorn	0,52	ja	0,51
+Betula	09Birke	0,55	nein	0,55
+Alnus	10Erle	0,45	ja	0,48
+Populus	11Pappel	0,43	ja	0,46
+Default	sonst	0,5	ja	0,48

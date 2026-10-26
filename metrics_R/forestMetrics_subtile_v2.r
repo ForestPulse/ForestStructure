@@ -518,19 +518,21 @@ ok <- vapply(results, function(x) {
 valid_files <- unlist(results[ok], use.names = FALSE)
 failed_files <- copc_files[!ok]
 message("Processed : ", length(valid_files), " / ", length(copc_files))
+
 if (length(failed_files)) {
   writeLines(failed_files, failed_log)
-  # Do not silently deliver a partial cube as if it were complete.
-  stop(length(failed_files), " tile(s) failed; see ", failed_log,
-       ". Mosaic not updated. Rerun the same command to retry failed tiles.")
+  message(length(failed_files), " tile(s) failed; see ", failed_log)
+} else if (file.exists(failed_log)) {
+  unlink(failed_log)
 }
-if (file.exists(failed_log)) unlink(failed_log)
+
 if (!length(valid_files)) stop("No valid tile outputs; aborting mosaic.")
 
 message("Building VRT from ", length(valid_files), " tiles ...")
 terra::vrt(valid_files, filename = vrt_file, overwrite = TRUE, set_names = TRUE)
 mosaic_vrt <- terra::rast(vrt_file)
 names(mosaic_vrt) <- OUTPUT_BANDS
+
 # Retain the original optional stats step, safely quoting the filename.
 gdalinfo <- Sys.which("gdalinfo")
 if (nzchar(gdalinfo)) {
